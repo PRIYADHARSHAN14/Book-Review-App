@@ -1,4 +1,4 @@
-const API_KEY = 'HarshrastogibookService';
+const API_KEY = 'Priyadharshan';
 
 export const urlauth = `/${API_KEY}/api/auth`;
 

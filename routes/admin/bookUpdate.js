@@ -12,10 +12,15 @@ const router = express.Router();
 
 
 router.post('/addbook',jwtaccess, upload.single('img'), async (req, res) => {
+
+    // console.log("Uploades successfully",req.file)
     try {
         if(!authenticate(req.userid)){
             return res.status(400).json({status : -10});
         }
+
+    
+        
         let book = await new Books({
             title: req.body.title,
             author: req.body.author,
@@ -29,6 +34,9 @@ router.post('/addbook',jwtaccess, upload.single('img'), async (req, res) => {
             if (err) {
                 throw err;
             };
+
+            console.log((path.join(__dirname + '/uploads/' + req.file.filename)));
+            
             try {
                 await BooksImage.create({
                     title: req.body.title,
@@ -38,8 +46,9 @@ router.post('/addbook',jwtaccess, upload.single('img'), async (req, res) => {
                         contentType: 'image/png'
                     }
                 })
-
-                fs.unlinkSync(path.join(__dirname + "/uploads/" + req.file.filename));
+                console.log("img created successfully");
+                
+                fs.unlinkSync(path.join(__dirname + '/uploads/' + req.file.filename));
                 res.json({ status: 0 });
             } catch (error) {
                 console.log(error);

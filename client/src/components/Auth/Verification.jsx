@@ -28,7 +28,7 @@ function Verification() {
     })
         .then((res) => res.json())
         .then((res) => {
-          if ( res.status===0 ) {
+          if ( res.status === 0 ) {
             buttonOTP.current.style.display = 'none';
             collectOTP.current.style.display = 'block';
             setTimer(true);

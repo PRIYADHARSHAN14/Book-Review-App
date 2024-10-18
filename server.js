@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const connect = require('./db');
-const cors  = require('cors');
+const cors  = require('cors'); 
 const morgan = require('morgan');
 require('dotenv').config();
 
@@ -26,7 +26,7 @@ app.use(cors())
 
 // To update
 app.use(`/${apikey}/api/admin`, require('./routes/admin/adminLogin'));
-app.use(`/${apikey}/api/book`, require('./routes/admin/bookUpdate'));
+app.use(`/${apikey}/api/book`, require('./routes/admin/bookUpdate')); 
 
 app.use(`/${apikey}/api/auth`, require('./routes/auth'));
 app.use(`/${apikey}/api/book`, require('./routes/booksdetail'));

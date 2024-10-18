@@ -24,11 +24,16 @@ router.post(
     }
 
     try {
+
+      console.log("called");
+      
       let user = await User.findOne({ email: req.body.email });
       // console.log(user);
       if (user) {
         return res.status(400).json({ status: -1 });
       }
+
+      console.log("User not found")
       bcrypt.hash(req.body.password, 10, async function (err, hash) {
         user = await User.create({
           name: req.body.name,
@@ -55,15 +60,25 @@ router.post(
 router.post('/sendOtp',jwtaccess, async (req, res) => {
   try {
     var user = await User.findById(req.userid);
+
+    console.log(user);
+    
     if (!user) {
       return res.status(400).json({ status: -1 });
     }
     let key = `${user.email}_OTP`;
     let OTP = createOtp();
+
+
+    console.log("key",key);
+    console.log("otp",OTP);
+    
     cache.set(key,OTP,420);
     await sendOTP(user.email,OTP);
     res.status(200).json({ status: 0 });
   } catch (error) {
+    console.log(error);
+    
     res.status(500).json({ status: -2 ,error});
   }
 

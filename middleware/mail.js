@@ -92,13 +92,11 @@ async function sendOTP(Useremail,otp) {
                 <p style="font-size: 14px; padding: 0; margin: 0; margin-top: 50px; text-align: left;">
                     Regards
                 </p>
-                <h1 style="font-size: 16px; padding: 0; margin: 0; margin-top: 5px; text-align: left;">Harsh Rastogi,</h1>
+                <h1 style="font-size: 16px; padding: 0; margin: 0; margin-top: 5px; text-align: left;">Priyadharsan,</h1>
                 <h3 style="font-size: 14px; padding: 0; margin: 0; text-align: left;">
                     Admin,
                 </h3>
-                <h3 style="font-size: 14px; padding: 0; margin: 0; margin-bottom: 50px; text-align: left;">
-                    <a href="https://harshrastogi15.github.io/Personal/">Profile</a>
-                </h3>
+                
                 <h3 style="font-size: 14px; padding: 0; margin: 0; margin-top: 10px; margin-bottom: 10px; text-align: center;">
                     Please Visit : ${linksOfWebsite}
                 </h3>
@@ -151,13 +149,11 @@ async function UserBookInfoAdd(email,name,bookname,bookauthor) {
                 <p style="font-size: 14px; padding: 0; margin: 0; margin-top: 50px; text-align: left;">
                     Regards
                 </p>
-                <h1 style="font-size: 14px; padding: 0; margin: 0; margin-top: 5px; text-align: left;">Harsh Rastogi,</h1>
+                <h1 style="font-size: 14px; padding: 0; margin: 0; margin-top: 5px; text-align: left;">Priyadharsan,</h1>
                 <h3 style="font-size: 14px; padding: 0; margin: 0; font-weight:normal; text-align: left;">
                     Admin,
                 </h3>
-                <h3 style="font-size: 14px; padding: 0; margin: 0; font-weight:normal; margin-bottom: 50px; text-align: left;">
-                    <a href="https://harshrastogi15.github.io/Personal/">Profile</a>
-                </h3>
+        
                 <h3 style="font-size: 14px; padding: 0; margin: 0; margin-top: 10px; margin-bottom: 10px; text-align: center;">
                     ${linksOfWebsite}
                 </h3>
